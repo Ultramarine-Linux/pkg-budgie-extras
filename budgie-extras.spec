@@ -1,5 +1,7 @@
+%undefine _disable_source_fetch
+
 Name:		budgie-extras
-Version:	1.2.0
+Version:	1.3.0
 Release:	1%{dist}
 License:	GPLv3
 Summary:	Additional Budgie Desktop enhancements for user experience
@@ -353,7 +355,7 @@ workspaces.
 %files -n budgie-applet-applications-menu
 %{_libdir}/budgie-desktop/plugins/applications-menu
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.plugins.budgie-appmenu.gschema.xml
-%{_datadir}/glib-2.0/schemas/io.elementary.desktop.wingpanel.applications-menu.gschema.xml
+#%%{_datadir}/glib-2.0/schemas/io.elementary.desktop.wingpanel.applications-menu.gschema.xml
 %endif
 
 %files -n budgie-applet-brightness-controller
@@ -429,7 +431,6 @@ workspaces.
 
 %files -n budgie-applet-trash
 %{_libdir}/budgie-desktop/plugins/budgie-trash
-%{_datadir}/pixmaps/budgie-trash-*.svg
 
 %files -n budgie-applet-visualspace
 %{_sysconfdir}/xdg/autostart/visualspace-autostart.desktop
@@ -457,7 +458,11 @@ workspaces.
 %{_libdir}/budgie-window-shuffler
 %{_datadir}/applications/shuffler-control.desktop
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.windowshuffler.gschema.xml
+%{_datadir}/glib-2.0/schemas/org.ubuntubudgie.plugins.budgie-shufflerapplet.gschema.xml
 %{_datadir}/pixmaps/shuffler-*.svg
+%{_datadir}/pixmaps/shufflerapplet-*.svg
+%{_libdir}/budgie-desktop/plugins/budgie-window-shuffler/ShufflerAPplet.plugin
+%{_libdir}/budgie-desktop/plugins/budgie-window-shuffler/libshufflerapplet.so
 
 %files -n budgie-applet-wmover
 %{_libdir}/budgie-desktop/plugins/budgie-wmover
