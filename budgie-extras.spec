@@ -61,6 +61,8 @@ Requires:	budgie-applet-workspace-stopwatch
 Requires:	budgie-applet-wpreviews
 Requires:	budgie-applet-wsoverview
 Requires:	budgie-applet-wswitcher
+# Fix for https://github.com/UbuntuBudgie/budgie-extras/issues/233, don't know how stenstorp did not notice this
+Requires:   xinput
 
 %description
 This is part of a suite of python3 and Vala based applets for the Budgie
