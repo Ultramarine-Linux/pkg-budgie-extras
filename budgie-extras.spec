@@ -299,36 +299,8 @@ workspaces.
 %if 0%{?fedora}
 %meson
 %else
-%meson \
-	-Dbuild-all=true \
-	-Dbuild-wpreviews=true \
-	-Dbuild-wswitcher=true \
-	-Dbuild-hotcorners=true \
-	-Dbuild-quicknote=true \
-	-Dbuild-wmover=true \
-	-Dbuild-wsoverview=true \
-	-Dbuild-showtime=true \
-	-Dbuild-countdown=true \
-	-Dbuild-keyboard-autoswitch=true \
-	-Dbuild-rotation-lock=true \
-	-Dbuild-clockworks=true \
-	-Dbuild-dropby=true \
-	-Dbuild-kangaroo=true \
-	-Dbuild-trash=true \
-	-Dbuild-app-launcher=true \
-	-Dbuild-recentlyused=true \
-	-Dbuild-takeabreak=true \
-	-Dbuild-workspacestopwatch=true \
-	-Dbuild-extrasdaemon=true \
-	-Dbuild-quickchar=true \
-	-Dbuild-fuzzyclock=true \
-	-Dbuild-brightness-controller=true \
-	-Dbuild-visualspace=true \
-	-Dbuild-wallstreet=true \
-	-Dbuild-network-manager=true \
-	-Dbuild-window-shuffler=true
+%meson
 %endif
-
 %meson_build
 
 %install
