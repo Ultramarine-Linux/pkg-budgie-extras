@@ -2,7 +2,7 @@
 
 Name:		budgie-extras
 Version:	1.3.0
-Release:	1%{dist}
+Release:	2%{dist}
 License:	GPLv3
 Summary:	Additional Budgie Desktop enhancements for user experience
 URL:		https://ubuntubudgie.org/
@@ -466,5 +466,8 @@ workspaces.
 %{_datadir}/pixmaps/budgie-wsw-symbolic.svg
 
 %changelog
+* Tue Feb 22 2022 Ultramarine Release Tracking Service - 1.3.0-2
+- Mass rebuild for release um36
+
 * Fri Apr 16 2021 Thomas Batten <stenstorpmc@gmail.com> - 1.2.0-1
 - Initial Build
