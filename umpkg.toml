@@ -1,4 +1,4 @@
-[umpkg]
+[budgie-extras]
 spec = "budgie-extras.spec"
 build_script = ""
 build_method = "mock"
