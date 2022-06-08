@@ -1,0 +1,13 @@
+name: Push to Koji using Teleport
+
+on:
+  push:
+    branches: [ "um36" ]
+
+jobs:
+  build:
+    uses: Ultramarine-Linux/github-actions/.github/workflows/rpm.yml@main
+    with:
+      name: "budgie-extras"
+    secrets:
+      teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
