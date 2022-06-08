@@ -1,0 +1,25 @@
+From 73f3ff4a32d8e7c9fbac6c9efc02736ae732cbc9 Mon Sep 17 00:00:00 2001
+From: trobonox <57040351+trobonox@users.noreply.github.com>
+Date: Wed, 8 Jun 2022 22:24:58 +0200
+Subject: [PATCH] Change image path of weathershow widget to be correct for
+ Fedora/Ultramarine
+
+---
+ budgie-weathershow/src/desktop_weather/desktop_weather.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/budgie-weathershow/src/desktop_weather/desktop_weather.vala b/budgie-weathershow/src/desktop_weather/desktop_weather.vala
+index 60beb10..20c8bda 100644
+--- a/budgie-weathershow/src/desktop_weather/desktop_weather.vala
++++ b/budgie-weathershow/src/desktop_weather/desktop_weather.vala
+@@ -309,7 +309,7 @@ public class DesktopWeather : Gtk.Window {
+     private void get_icondata () {
+         // fetch the icon list
+         string icondir = "/".concat(
+-            "usr/lib/budgie-desktop/plugins",
++            "usr/lib64/budgie-desktop/plugins",
+             "/budgie-weathershow/weather_icons"
+         );
+         iconnames = {};
+-- 
+2.29.2
