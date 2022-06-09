@@ -57,10 +57,8 @@ Requires:	budgie-applet-trash
 Requires:	budgie-applet-visualspace
 Requires:	budgie-applet-wallstreet
 Requires:	budgie-applet-window-shuffler
-Requires:	budgie-applet-wmover
 Requires:	budgie-applet-workspace-stopwatch
 Requires:	budgie-applet-wpreviews
-Requires:	budgie-applet-wsoverview
 Requires:	budgie-applet-wswitcher
 # Fix for https://github.com/UbuntuBudgie/budgie-extras/issues/233, don't know how stenstorp did not notice this
 Requires:   xinput
@@ -250,16 +248,6 @@ Summary:	Budgie Window Shuffler
 %description -n	budgie-applet-window-shuffler
 %{summary}
 
-%package -n	budgie-applet-wmover
-Requires:	budgie-extras-common
-Summary:	An applet to quickly move windows to any of the other workspaces
-%description -n	budgie-applet-wmover
-Budgie WindoMover is an application (applet) to quickly move windows to any of
-the other workspaces. Just drag a window to the bottom of the screen and a bar
-will popup, representing the workspaces. Click on any of the numbers (or press
-the corresponding number on the keyboard), and the window will move to that
-workspace
-
 %package -n	budgie-applet-workspace-stopwatch
 Requires:	budgie-extras-common
 Summary:	An applet to keep track of usage per workspace
@@ -276,16 +264,6 @@ Requires:	budgie-extras-common
 Summary:	Applet providing window previews capabilities for the Budgie Desktop
 %description -n	budgie-applet-wpreviews
 The Previews applet shows an overview of windows in an expose like way.
-
-%package -n	budgie-applet-wsoverview
-Requires:	budgie-extras-common
-Requires:   xprop
-Requires:   wmctrl
-Summary:	Applet providing quick access to workspaces for the Budgie Desktop
-%description -n	budgie-applet-wsoverview
-The workspace overview applet allows a user to quickly navigate
-workspaces using the applet's menu.  Optionally, navigation to any
-window in any workspace is possible.
 
 %package -n	budgie-applet-wswitcher
 Requires:	budgie-extras-common
@@ -441,10 +419,6 @@ workspaces.
 %{_libdir}/budgie-desktop/plugins/budgie-window-shuffler/ShufflerAPplet.plugin
 %{_libdir}/budgie-desktop/plugins/budgie-window-shuffler/libshufflerapplet.so
 
-%files -n budgie-applet-wmover
-%{_libdir}/budgie-desktop/plugins/budgie-wmover
-%{_datadir}/pixmaps/budgie-wmover-symbolic.svg
-
 %files -n budgie-applet-workspace-stopwatch
 %{_libdir}/budgie-desktop/plugins/budgie-workspace-stopwatch
 %{_datadir}/pixmaps/budgie-wstopwatch-symbolic.svg
@@ -456,12 +430,6 @@ workspaces.
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.budgie-wpreviews.gschema.xml
 %{_datadir}/pixmaps/budgie_wpreviews_*.png
 %{_datadir}/pixmaps/budgiewprviews.svg
-
-%files -n budgie-applet-wsoverview
-%{_libdir}/budgie-desktop/plugins/budgie-wsoverview
-%{_datadir}/glib-2.0/schemas/org.ubuntubudgie.plugins.budgie-wsoverview.gschema.xml
-%{_datadir}/pixmaps/budgie-wsoverview-symbolic.svg
-%{_datadir}/pixmaps/ws*-symbolic.svg
 
 %files -n budgie-applet-wswitcher
 %{_libdir}/budgie-desktop/plugins/budgie-wswitcher
