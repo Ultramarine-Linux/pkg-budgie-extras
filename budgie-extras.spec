@@ -3,6 +3,7 @@
 Name:		budgie-extras
 Version:	1.4.0
 Release:	1%{dist}
+
 License:	GPLv3
 Summary:	Additional Budgie Desktop enhancements for user experience
 URL:		https://ubuntubudgie.org/
@@ -440,6 +441,7 @@ workspaces.
 * Thu Jun 09 2022 Cappy Ishihara <cappy@cappuchino.xyz> - 1.4.0-1
 - Updated to 1.4.0
 - Added requirements for Workspace Overview
+
 
 * Fri Apr 16 2021 Thomas Batten <stenstorpmc@gmail.com> - 1.2.0-1
 - Initial Build
