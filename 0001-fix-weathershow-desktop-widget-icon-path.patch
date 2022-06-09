@@ -1,8 +1,7 @@
-From 73f3ff4a32d8e7c9fbac6c9efc02736ae732cbc9 Mon Sep 17 00:00:00 2001
+From 0f3fb0928295852a4d1b2ef17476f18d444d0840 Mon Sep 17 00:00:00 2001
 From: trobonox <57040351+trobonox@users.noreply.github.com>
-Date: Wed, 8 Jun 2022 22:24:58 +0200
-Subject: [PATCH] Change image path of weathershow widget to be correct for
- Fedora/Ultramarine
+Date: Thu, 9 Jun 2022 09:08:13 +0200
+Subject: [PATCH] Fix path for weathershow desktop widget icons
 
 ---
  budgie-weathershow/src/desktop_weather/desktop_weather.vala | 2 +-
@@ -22,4 +21,4 @@ index 60beb10..20c8bda 100644
          );
          iconnames = {};
 -- 
-2.29.2
+2.36.1
