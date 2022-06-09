@@ -277,7 +277,7 @@ used to. The applet will remember what wallpaper was set on each of the
 workspaces.
 
 %prep
-%autosetup
+%autosetup -p1
 
 %build
 %if 0%{?fedora}
@@ -289,6 +289,14 @@ workspaces.
 
 %install
 %meson_install
+
+# Remove absolute symlink and replace with relative symlink
+rm -f %{buildroot}%{_bindir}/quickchar
+
+%post
+
+%{__ln_s} -fv %{_bindir}/quickchar %{_libdir}/quickchar/quickchar
+
 
 %files
 
@@ -355,12 +363,14 @@ workspaces.
 
 %files -n budgie-applet-quickchar
 %{_sysconfdir}/xdg/autostart/quickchar-autostart.desktop
-%{_bindir}/quickchar
+%ghost %{_bindir}/quickchar
 %{_libdir}/quickchar
-%{_datadir}/applications/quickchar.desktop
+%{_datadir}/applications/org.ubuntubudgie.quickchar.desktop
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.quickchar.gschema.xml
 %{_datadir}/quickchar/chardata
+%{_datadir}/icons/hicolor/scalable/apps/org.ubuntubudgie.quickchar.svg
 %{_mandir}/man1/quickchar.1.gz
+%{_datadir}/metainfo/org.ubuntubudgie.quickchar.metainfo.xml
 
 %files -n budgie-applet-quicknote
 %{_libdir}/budgie-desktop/plugins/budgie-quicknote
@@ -397,9 +407,10 @@ workspaces.
 %files -n budgie-applet-wallstreet
 %{_sysconfdir}/xdg/autostart/wallstreet-autostart.desktop
 %{_libdir}/budgie-wallstreet/wallstreet*
-%{_datadir}/applications/wallstreet-control.desktop
+%{_datadir}/applications/org.ubuntubudgie.wallstreetcontrol.desktop
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.budgie-wallstreet.gschema.xml
-%{_datadir}/pixmaps/wallstreet-control.svg
+%{_datadir}/icons/hicolor/scalable/apps/org.ubuntubudgie.wallstreet-control.svg
+%{_datadir}/metainfo/org.ubuntubudgie.wallstreetcontrol.metainfo.xml
 
 %if 0%{?fedora}
 %files -n budgie-applet-weathershow
@@ -412,13 +423,15 @@ workspaces.
 %{_sysconfdir}/xdg/autostart/layoutspopup-autostart.desktop
 %{_sysconfdir}/xdg/autostart/shuffler*.desktop
 %{_libdir}/budgie-window-shuffler
-%{_datadir}/applications/shuffler-control.desktop
+%{_datadir}/applications/org.ubuntubudgie.shufflercontrol.desktop
+%{_datadir}/icons/hicolor/scalable/apps/org.ubuntubudgie.shuffler-control.svg
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.windowshuffler.gschema.xml
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.plugins.budgie-shufflerapplet.gschema.xml
 %{_datadir}/pixmaps/shuffler-*.svg
 %{_datadir}/pixmaps/shufflerapplet-*.svg
 %{_libdir}/budgie-desktop/plugins/budgie-window-shuffler/ShufflerAPplet.plugin
 %{_libdir}/budgie-desktop/plugins/budgie-window-shuffler/libshufflerapplet.so
+%{_datadir}/metainfo/org.ubuntubudgie.shufflercontrol.metainfo.xml
 
 %files -n budgie-applet-workspace-stopwatch
 %{_libdir}/budgie-desktop/plugins/budgie-workspace-stopwatch
@@ -427,10 +440,11 @@ workspaces.
 %files -n budgie-applet-wpreviews
 %{_sysconfdir}/xdg/autostart/previews-*.desktop
 %{_libdir}/budgie-previews
-%{_datadir}/applications/previewscontrols.desktop
+%{_datadir}/applications/org.ubuntubudgie.previewscontrols.desktop
+%{_datadir}/metainfo/org.ubuntubudgie.previewscontrols.metainfo.xml
 %{_datadir}/glib-2.0/schemas/org.ubuntubudgie.budgie-wpreviews.gschema.xml
 %{_datadir}/pixmaps/budgie_wpreviews_*.png
-%{_datadir}/pixmaps/budgiewprviews.svg
+%{_datadir}/icons/hicolor/scalable/apps/org.ubuntubudgie.budgiewpreviews.svg
 
 %files -n budgie-applet-wswitcher
 %{_libdir}/budgie-desktop/plugins/budgie-wswitcher

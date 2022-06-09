@@ -1,17 +1,7 @@
-From 0f3fb0928295852a4d1b2ef17476f18d444d0840 Mon Sep 17 00:00:00 2001
-From: trobonox <57040351+trobonox@users.noreply.github.com>
-Date: Thu, 9 Jun 2022 09:08:13 +0200
-Subject: [PATCH] Fix path for weathershow desktop widget icons
-
----
- budgie-weathershow/src/desktop_weather/desktop_weather.vala | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
-diff --git a/budgie-weathershow/src/desktop_weather/desktop_weather.vala b/budgie-weathershow/src/desktop_weather/desktop_weather.vala
-index 60beb10..20c8bda 100644
---- a/budgie-weathershow/src/desktop_weather/desktop_weather.vala
-+++ b/budgie-weathershow/src/desktop_weather/desktop_weather.vala
-@@ -309,7 +309,7 @@ public class DesktopWeather : Gtk.Window {
+diff --color -ru budgie-extras-1.4.0/budgie-weathershow/src/desktop_weather/desktop_weather.vala budgie-extras-1.4.0-patched/budgie-weathershow/src/desktop_weather/desktop_weather.vala
+--- budgie-extras-1.4.0/budgie-weathershow/src/desktop_weather/desktop_weather.vala	2022-03-11 06:24:44.000000000 +0700
++++ budgie-extras-1.4.0-patched/budgie-weathershow/src/desktop_weather/desktop_weather.vala	2022-06-09 14:57:46.677283438 +0700
+@@ -308,7 +308,7 @@
      private void get_icondata () {
          // fetch the icon list
          string icondir = "/".concat(
@@ -20,5 +10,3 @@ index 60beb10..20c8bda 100644
              "/budgie-weathershow/weather_icons"
          );
          iconnames = {};
--- 
-2.36.1
