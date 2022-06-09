@@ -1,7 +1,7 @@
 %undefine _disable_source_fetch
 
 Name:		budgie-extras
-Version:	1.3.0
+Version:	1.4.0
 Release:	1%{dist}
 License:	GPLv3
 Summary:	Additional Budgie Desktop enhancements for user experience
@@ -279,6 +279,8 @@ The Previews applet shows an overview of windows in an expose like way.
 
 %package -n	budgie-applet-wsoverview
 Requires:	budgie-extras-common
+Requires:   xprop
+Requires:   wmctrl
 Summary:	Applet providing quick access to workspaces for the Budgie Desktop
 %description -n	budgie-applet-wsoverview
 The workspace overview applet allows a user to quickly navigate
@@ -467,5 +469,9 @@ workspaces.
 %{_datadir}/pixmaps/budgie-wsw-symbolic.svg
 
 %changelog
+* Thu Jun 09 2022 Cappy Ishihara <cappy@cappuchino.xyz> - 1.4.0-1
+- Updated to 1.4.0
+- Added requirements for Workspace Overview
+
 * Fri Apr 16 2021 Thomas Batten <stenstorpmc@gmail.com> - 1.2.0-1
 - Initial Build
